@@ -170,3 +170,80 @@ body{
         content: '|';
     }
 }
+.photo{
+    height: 280px;
+    width: 280px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.photo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.photo::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: .3s linear;
+}
+.photo:hover::before{
+    opacity: 1;
+}
+.photo .photo-info{
+    color: transparent;
+    bottom: 30px;
+    left: 30px;
+    position: absolute;
+    transform: translateY(100px);
+    transition: .3s linear;
+}
+.photo:hover .photo-info{
+    color: white;
+    transform: translateY(0);
+}
+.border{
+    background-color: white;
+    position: absolute;
+    transition: .5s linear;
+}
+.border.top, .border.bottom{
+    height: 5px;
+    width: 270px;
+}
+.border.left, .border.right{
+    height: 270px;
+    width: 5px;
+}
+.border.top{
+    top: 5px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 5px;
+    left: 100%;
+}
+.border.left{
+    left: 5px;
+    bottom: 100%;
+}
+.border.right{
+    right: 5px;
+    top: 100%;
+}
+.photo:hover .border.top{
+    right: 5px;
+}
+.photo:hover .border.bottom{
+    left: 5px;
+}
+.photo:hover .border.left{
+    bottom: 5px;
+}
+.photo:hover .border.right{
+    top: 5px;
+}
