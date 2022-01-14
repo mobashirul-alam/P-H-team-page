@@ -43,6 +43,21 @@ body{
 }
 .banner-text{
     line-height: 2;
+    padding: 10px 0;
+}
+.button-explore{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 20px;
+    background-color: #22bedd;
+    color: white;
+    border: 2px solid #22bedd;
+    border-radius: 5px;
+}
+.button-explore:hover{
+    background-color: transparent;
+    color: #22bedd;
+    transition: .25s linear;
 }
 @keyframes typing{
     0%{
